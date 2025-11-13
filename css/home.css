@@ -1,0 +1,279 @@
+/* ========================
+   Global Styles
+======================== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* ========================
+   Navbar
+======================== */
+.navbar {
+  background: #ffffff;
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a.active { color: #007bff; }
+.username-display {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* Hamburger menu for mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #fff;
+    padding: 10px 0;
+  }
+  .nav-links.show { display: flex; }
+}
+
+/* ========================
+   Hero Section
+======================== */
+.hero {
+  background: linear-gradient(to right, #eaf4ff, #ffffff);
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.hero button {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero button:hover { background: #0056b3; }
+
+/* ========================
+   Search Section (Reorganized)
+======================== */
+.search-section {
+  background: #f9f9f9; /* softer background */
+  padding: 30px 20px;
+  border-radius: 16px;
+  max-width: 750px;
+  margin: 50px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.search-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #4a4a4a; /* softer text */
+  font-weight: 600;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 20px;
+}
+
+.search-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.search-form select,
+.search-form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.search-form select:focus,
+.search-form input:focus {
+  border-color: #6c63ff; /* change focus color */
+  outline: none;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+}
+
+.search-form button {
+  grid-column: 1 / -1; /* span full width */
+  background: #3026e6;
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.search-form button:hover {
+  background: #160e81;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+  .search-form button {
+    margin-top: 15px;
+  }
+}
+
+/* ========================
+   Listings Section
+======================== */
+.listings-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.post-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.post-card h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+.post-card p {
+  margin: 0 15px 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+.post-card button {
+  font-size: 14px;
+  padding: 8px 15px;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ========================
+   Hire Manager & Verify Sections
+======================== */
+.hire-manager-promo, .verify-promo {
+  background: #a7bb35;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+.verify-promo {
+  background: #429763;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+.hire-manager-promo h2, .verify-promo h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+.hire-manager-promo p, .verify-promo p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #070707;
+}
+.hire-btn, .verify-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.hire-btn:hover, .verify-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ========================
+   Mobile Responsiveness
+======================== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .search-form { grid-template-columns: 1fr; }
+  .listings-container { grid-template-columns: 1fr; }
+  .hire-manager-promo, .verify-promo { padding: 30px 15px; }
+}

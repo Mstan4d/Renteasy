@@ -1,0 +1,92 @@
+/* find-managers.css */
+:root{
+  --accent:#3b82f6;
+  --muted:#6b7280;
+  --card-bg:#ffffff;
+  --shadow:rgba(0,0,0,0.08);
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* navbar */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 18px;
+  background: linear-gradient(90deg,#0056b3,#007bff);
+  color:#fff;
+  gap:10px;
+}
+.logo { font-weight:700; display:flex; align-items:center; gap:8px; }
+.nav-links { list-style:none; display:flex; gap:12px; margin:0; padding:0; }
+.nav-links li a { color:#fff; text-decoration:none; padding:6px 10px; border-radius:6px; }
+.nav-links li a:hover { background: rgba(255,255,255,0.06); }
+
+/* header */
+.page-header { padding:18px; border-bottom:1px solid rgba(230,240,255,0.6); background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); }
+.header-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.page-header h1 { margin:0 0 6px; font-size:1.25rem; color:#fff; }
+.page-header p { color:#e6f0ff; margin:0; max-width:680px; }
+
+/* summary pill */
+.summary-pill { background:var(--card-bg); padding:8px 12px; border-radius:999px; box-shadow:0 6px 12px var(--shadow); font-weight:600; color:#111; }
+
+/* filter row */
+.filter-panel { padding:12px 0; background:#f6fbff; border-bottom:1px solid #ecf6ff; }
+.filter-row { max-width:1100px; margin:0 auto; display:flex; gap:10px; align-items:center; flex-wrap:wrap; padding:6px; }
+.filter-row .col { flex:1 1 180px; min-width:140px; }
+.filter-row .col input, .filter-row .col select {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #ddebf9; background:#fff; font-size:0.95rem;
+}
+
+/* grid */
+.fm-main { max-width:1100px; margin:18px auto; padding:0 12px 60px; }
+.fm-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap:14px;
+}
+
+/* card */
+.fm-card {
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow: 0 8px 20px var(--shadow);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition: transform 220ms ease;
+}
+.fm-card:hover { transform: translateY(-6px); }
+.fm-card .top { display:flex; gap:12px; padding:14px; align-items:center; }
+.fm-card .avatar { width:72px; height:72px; border-radius:10px; object-fit:cover; }
+.fm-info { flex:1; }
+.fm-info h3 { margin:0 0 6px; font-size:1.05rem; color:#0b2447; }
+.fm-meta { color:var(--muted); font-size:0.9rem; margin-bottom:8px; }
+.fm-actions { display:flex; gap:8px; padding:12px; border-top:1px solid #f1f6ff; justify-content:flex-end; }
+
+/* badges */
+.badge { padding:6px 8px; border-radius:999px; font-weight:600; font-size:12px; display:inline-block; }
+.verified-firm { background:#e9f9f0; color:#0b6b2f; }
+.certified-partner { background:#fff8e6; color:#b26c00; }
+
+/* rating */
+.rating { display:flex; gap:6px; align-items:center; font-weight:600; color:#ffb020; }
+
+/* modal */
+.modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,6,23,0.55); z-index:9999; padding:16px; }
+.modal-inner { width:100%; max-width:540px; background:#fff; border-radius:10px; padding:18px; box-shadow:0 8px 30px rgba(0,0,0,0.25); position:relative; }
+.modal-close { position:absolute; right:10px; top:8px; background:none; border:none; font-size:22px; cursor:pointer; color:#333; }
+.modal-inner label { display:block; margin-top:10px; font-weight:600; }
+.modal-inner input, .modal-inner select, .modal-inner textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #e5efff; margin-top:6px; font-size:14px; }
+.modal-actions { display:flex; gap:10px; margin-top:12px; justify-content:flex-end; }
+.btn { padding:8px 12px; border-radius:8px; border:none; cursor:pointer; }
+.btn.primary { background:var(--accent); color:#fff; font-weight:700; }
+.btn.small { padding:8px 10px; background:var(--accent); color:#fff; }
+
+/* responsive */
+@media (max-width:720px) {
+  .filter-row .col { min-width:120px; flex:1 1 45%; }
+  .header-inner { flex-direction:column; align-items:flex-start; gap:8px; }
+  .fm-card .top { gap:10px; }
+}

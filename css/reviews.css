@@ -1,0 +1,77 @@
+/* Reviews Section - Minimal Lightweight Design */
+.reviews-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review-summary {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.add-review {
+  margin-bottom: 1.5rem;
+}
+
+.add-review form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.add-review select,
+.add-review textarea,
+.add-review button {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.add-review textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-review button {
+  background: #4cafef;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-review button:hover {
+  background: #3aa8e0;
+}
+
+.reviews-list {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.review {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review .stars {
+  color: #f5c518; /* clean gold tone */
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.review p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}

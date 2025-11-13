@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafc;
+  margin: 0;
+}
+
+.navbar {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.verification-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.verification-form h2 {
+  text-align: center;
+  color: #333;
+}
+
+.verification-form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.verification-form input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.badge-card {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #e9f5ff;
+}

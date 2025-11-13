@@ -1,0 +1,190 @@
+/* ============ General Layout ============ */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f8fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.monitor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ============ Header ============ */
+.monitor-header {
+  background: #3b82f6;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.monitor-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.monitor-controls input,
+.monitor-controls select,
+.monitor-controls button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.monitor-controls input {
+  width: 200px;
+}
+
+.monitor-controls button {
+  background: #1e3a8a;
+  color: white;
+  cursor: pointer;
+}
+
+.monitor-controls button:hover {
+  background: #2563eb;
+}
+
+/* ============ Main Layout ============ */
+.monitor-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ============ Conversations List ============ */
+.conversation-panel {
+  width: 30%;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+#monitorConversationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.monitor-convo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.monitor-convo:hover {
+  background: #f3f4f6;
+}
+
+.monitor-convo.unread {
+  background: #e0f2fe;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #60a5fa;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.details .names {
+  font-weight: 600;
+}
+
+.details .preview {
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+.details .time {
+  font-size: 0.75em;
+  color: #9ca3af;
+}
+
+/* ============ Chat Panel ============ */
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+}
+
+.chat-panel h3 {
+  margin: 0;
+  padding: 15px;
+  background: #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ============ Messages ============ */
+.message {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.message.tenant .chat-avatar {
+  background: #3b82f6;
+}
+
+.message.landlord .chat-avatar {
+  background: #9333ea;
+}
+
+.bubble {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  max-width: 70%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.message.tenant .bubble {
+  background: #dbeafe;
+}
+
+.message.landlord .bubble {
+  background: #f3e8ff;
+}
+
+.timestamp {
+  font-size: 0.7em;
+  color: #6b7280;
+  margin-top: 4px;
+  text-align: right;
+}

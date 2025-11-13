@@ -1,0 +1,214 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafc;
+  color: #222;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d1b2a;
+  color: white;
+  padding: 15px 40px;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  color: #ddd;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav .active {
+  color: #f0b429;
+}
+
+.verify-btn {
+  background: #f0b429;
+  border: none;
+  color: #0d1b2a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.verify-btn:hover {
+  background: #ffcb42;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/landlord-bg.jpg') center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.start-btn {
+  background: #f0b429;
+  color: #0d1b2a;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.start-btn:hover {
+  background: #ffcb42;
+  transform: translateY(-2px);
+}
+
+/* Why Verify Section */
+.why-verify {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.why-verify h2 {
+  margin-bottom: 40px;
+  font-size: 1.8em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.card i {
+  font-size: 2em;
+}
+
+.card h3 {
+  margin-top: 15px;
+  color: #0d1b2a;
+}
+
+/* Verification Form */
+.verification-form {
+  padding: 60px 10%;
+  background: #f4f6f8;
+}
+
+.verification-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d1b2a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  margin-top: 25px;
+  background: #0d1b2a;
+  color: #fff;
+  border: 2px solid #f0b429;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #142d4c;
+}
+
+/* Badge Preview */
+.badge-preview {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.badge-card {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+
+.badge-icon {
+  font-size: 3em;
+  color: #f0b429;
+  margin-right: 20px;
+}
+
+.badge-text h3 {
+  margin-bottom: 5px;
+  color: #0d1b2a;
+}
+
+/* Footer */
+.footer {
+  background: #0d1b2a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer .socials a {
+  color: #f0b429;
+  margin: 0 10px;
+  text-decoration: none;
+}
