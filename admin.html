@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | RentEasy</title>
+  <link rel="stylesheet" href="css/admin.css" />
+  <div class="user-info">
+  <img id="userAvatar" src="images/default-avatar.png" alt="User Avatar">
+  <span id="welcomeMessage">Welcome!</span>
+</div>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">RentEasy Admin</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">User Dashboard</a>
+    </div>
+  </nav>
+
+  <nav class="admin-nav">
+    <h2>Admin Dashboard</h2>
+    <button id="logoutBtn">Logout</button>
+  </nav>
+
+  <section class="admin-container">
+    <h2>All Submitted Listings</h2>
+    <div class="controls">
+      <label><input type="checkbox" id="showOnlyPending"> Show Only Pending</label>
+    </div>
+
+    <section id="tenantApprovals">
+  <h2>Pending Tenant Verifications</h2>
+  <div id="tenantList"></div>
+   </section>
+
+
+    <div id="admin-listings" class="listing-grid">
+      <!-- Listings will load here via JS -->
+    </div>
+  </section>
+
+  <table id="adminListingsTable">
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Owner</th>
+      <th>Location</th>
+      <th>Status</th>
+      <th>Manager Verification</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- JS will populate rows here -->
+  </tbody>
+</table>
+
+  <!-- ✅ Ensure admin is logged in 
+  <script>
+    if (!sessionStorage.getItem("adminLoggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script> -->
+
+  <!-- ✅ Load Admin JS -->
+  <script src="js/js/admin.js"></script>
+  <script src="js/js/reviews.js"></script>
+  <script src="js/js/admin-tenants.js"></script>
+</body>
+</html>

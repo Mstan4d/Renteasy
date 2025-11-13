@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provider Dashboard | RentEasy</title>
+  <link rel="stylesheet" href="css/provider-dashboard.css" />
+  <script src="js/js/login-check.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome, <span id="providerName"></span></h1>
+    <button id="logoutBtn">Logout</button>
+    <div class="user-info">
+  <img id="userAvatar" src="images/default-avatar.png" alt="User Avatar">
+  <span id="welcomeMessage">Welcome!</span>
+</div>
+  </header>
+
+  <section class="dashboard">
+    <div class="card">
+      <h3>Service Category</h3>
+      <p id="providerCategory"></p>
+    </div>
+
+    <div class="card">
+      <h3>Contact</h3>
+      <p id="providerPhone"></p>
+    </div>
+
+    <div class="card">
+      <h3>Profile Management</h3>
+      <a href="#" id="editProfileLink">Edit Profile</a>
+    </div>
+  </section>
+
+  <script src="js/js/provider-dashboard.js"></script>
+  <script src="js/js/logout.js"></script>
+</body>
+</html>

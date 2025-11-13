@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Estate Profile | RentEasy</title>
+  <link rel="stylesheet" href="css/estate-profile.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="estate-dashboard.html">Dashboard</a></li>
+        <li><a href="estate-kyc.html">KYC Verification</a></li>
+        <li><a href="estate-profile.html" class="active">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <h1>Profile</h1>
+      <p>View or update your details</p>
+    </header>
+
+    <section class="profile-section">
+      <form id="profileForm">
+        <label for="businessName">Business Name</label>
+        <input type="text" id="businessName" placeholder="Business Name" required>
+
+        <label for="contactPerson">Manager / Contact Person</label>
+        <input type="text" id="contactPerson" placeholder="Contact Person">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <label for="kycStatus">KYC Status</label>
+        <input type="text" id="kycStatus" disabled>
+
+        <button type="submit" class="update-btn">Update Profile</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/js/estate-profile.js"></script>
+</body>
+</html>

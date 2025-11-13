@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYC Verification | RentEasy</title>
+  <link rel="stylesheet" href="css/manager-verification-pass.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="manager-dashboard.html">Dashboard</a></li>
+        <li><a href="manager-verification-pass.html" class="active">KYC Verification</a></li>
+        <li><a href="manager-profile.html">Profile</a></li>
+        <li><a href="manager-login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <h1>KYC Verification</h1>
+      <p>Submit your details for admin approval</p>
+    </header>
+
+    <section class="verification-section">
+      <form id="kycForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" readonly>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="Enter phone number" required>
+
+        <label for="idProof">Upload ID Proof</label>
+        <input type="file" id="idProof" accept="image/*,.pdf" required>
+
+        <label for="otherDocs">Other Supporting Documents</label>
+        <input type="file" id="otherDocs" accept=".pdf,.doc,.docx" multiple>
+
+        <button type="submit" class="submit-btn">Submit for Verification</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/js/manager-verification-pass.js"></script>
+</body>
+</html>

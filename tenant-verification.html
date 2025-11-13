@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenant Verification | RentEasy</title>
+  <link rel="stylesheet" href="css/tenant-verification.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🏠 RentEasy</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="find-house.html">Find House</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="post.html" class="active">Post</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Get Verified as a Tenant</h1>
+      <p>Verification helps prove you’re a genuine outgoing tenant listing a real property.</p>
+    </div>
+  </section>
+
+  <!-- Verification Form -->
+  <section class="verification-form" id="verify-form">
+    <h2>Submit Verification Details</h2>
+    <form id="tenantForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Property Address You’re Vacating</label>
+      <input type="text" id="address" required />
+
+      <label>Upload Valid ID (PDF/Image)</label>
+      <input type="file" id="tenantID" accept=".jpg,.jpeg,.png,.pdf" required />
+
+      <label>Contact Number</label>
+      <input type="tel" id="phone" required />
+
+      <label>Email Address</label>
+      <input type="email" id="email" required />
+
+      <button type="submit" class="submit-btn">Submit for Verification</button>
+    </form>
+  </section>
+
+  <!-- Badge Preview -->
+  <section class="badge-preview">
+    <h2>Your Verified Tenant Badge</h2>
+    <div class="badge-card">
+      <div class="badge-icon">🏅</div>
+      <div class="badge-text">
+        <h3>Verified Tenant</h3>
+        <p>This badge will appear next to your listings once approved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 RentEasy. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/js/tenant-verification.js"></script>
+</body>
+</html>

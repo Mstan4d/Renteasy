@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managed Properties | RentEasy</title>
+  <link rel="stylesheet" href="css/estate-properties.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="estate-dashboard.html">Dashboard</a></li>
+        <li><a href="estate-properties.html" class="active">Managed Properties</a></li>
+        <li><a href="estate-add-property.html">Add Property</a></li>
+        <li><a href="estate-kyc.html">KYC Verification</a></li>
+        <li><a href="estate-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Header/User Info -->
+  <header class="header">
+    <div class="user-info">
+      <img src="images/default-avatar.png" alt="Avatar">
+      <span id="welcomeMessage">Welcome, Estate Firm!</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="managed-properties-section">
+      <h1>Managed Properties</h1>
+      <table id="propertiesTable">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Owner</th>
+            <th>Rent Amount (₦)</th>
+            <th>Due Date</th>
+            <th>End Date</th>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Rating</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate -->
+        </tbody>
+      </table>
+    </section>
+
+    <audio id="notifySound" src="sounds/notify.mp3" preload="auto"></audio>
+  </main>
+
+  <script src="js/js/estate-properties.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Property | RentEasy</title>
+  <link rel="stylesheet" href="css/estate-add-property.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="estate-dashboard.html">Dashboard</a></li>
+        <li><a href="estate-properties.html">Managed Properties</a></li>
+        <li><a href="estate-add-property.html" class="active">Add Property</a></li>
+        <li><a href="estate-kyc.html">KYC Verification</a></li>
+        <li><a href="estate-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Header/User Info -->
+  <header class="header">
+    <div class="user-info">
+      <img src="images/default-avatar.png" alt="Avatar">
+      <span id="welcomeMessage">Welcome, Estate Firm!</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="add-property-section">
+      <h1>Add Property</h1>
+      <form id="addPropertyForm">
+        <label>Property Name</label>
+        <input type="text" id="propertyName" placeholder="Enter property name" required>
+
+        <label>Owner Name</label>
+        <input type="text" id="ownerName" placeholder="Enter owner name" required>
+
+        <label>Rent Amount (₦)</label>
+        <input type="number" id="rentAmount" placeholder="Enter rent amount" required>
+
+        <label>Rent Due Date</label>
+        <input type="date" id="rentDueDate" required>
+
+        <label>Rent End Date</label>
+        <input type="date" id="rentEndDate" required>
+
+        <label>Source</label>
+        <select id="source">
+          <option value="renteasy">RentEasy-acquired</option>
+          <option value="external">External Property</option>
+        </select>
+
+        <label>Rating (Optional)</label>
+        <input type="number" id="rating" min="1" max="5" placeholder="1-5">
+
+        <button type="submit">Add Property</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/js/estate-add-property.js"></script>
+</body>
+</html>

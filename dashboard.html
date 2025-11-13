@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | RentEasy</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/js/login-check.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RentEasy</div>
+    <div class="nav-links">
+      <span id="userGreeting">Hello, User!</span>
+      <button id="toggleSidebar">☰</button>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="find-managers.html">Find Estate managers</a></li>
+      <li><a href="post.html">Post Property</a></li>
+      <li><a href="messages.html">Messages <span id="unreadBadge" class="badge">0</span></a></li>
+      <li><a href=" " class="logout-btn">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- User Info -->
+  <div class="user-info">
+    <img id="userAvatar" src="images/default-avatar.png" alt="User Avatar">
+    <span id="welcomeMessage">Welcome!</span>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Referral Section -->
+    <section class="referral-section">
+      <h3>Your Referral Program</h3>
+      <div class="referral-box">
+        <p><strong>Your Code:</strong> <span id="refCode"></span></p>
+        <p><strong>Your Link:</strong> <input type="text" id="refLink" readonly></p>
+        <button id="copyLinkBtn">Copy Link</button>
+      </div>
+      <div class="earnings-box">
+        <h4>Total Referral Earnings:</h4>
+        <p id="refEarnings">₦0</p>
+      </div>
+    </section>
+
+    <!-- Listings Section -->
+    <section class="listings">
+      <h3>Your Listings</h3>
+      <ul id="userListings"></ul>
+    </section>
+
+    <!-- Chat Section -->
+    <section class="dashboard-chat">
+      <h3>Messages</h3>
+      <aside class="conversations">
+        <ul id="conversationList"></ul>
+      </aside>
+      <main class="chat-area">
+        <header><h4 id="chatWith">Select a conversation</h4></header>
+        <div id="chatWindow" class="chat-window"></div>
+        <form id="chatForm" class="chat-form">
+          <input type="text" id="chatInput" placeholder="Type a message..." />
+          <input type="file" id="chatAttachment" accept="image/*" />
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </section>
+
+  </main>
+
+  <script src="js/js/dashboard.js"></script>
+  <script src="js/js/logout.js"></script>
+</body>
+</html>

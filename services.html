@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Services Hub | RentEasy</title>
+  <link rel="stylesheet" href="css/services.css">
+  <script defer src="js/services.js"></script>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo">RentEasy</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="listings.html">Find Apartment</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="landlord-verification.html">Verify Landlord</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Hero Section -->
+  <section class="hero">
+    <h1>Find Trusted Home Services Fast</h1>
+    <p>Verified cleaners, electricians, plumbers, and more — all in one place.</p>
+    <div class="search-bar">
+      <input type="text" id="serviceSearch" placeholder="Search for a service (e.g., plumber, cleaner)...">
+      <button onclick="searchService()">Search</button>
+    </div>
+  </section>
+
+  <!-- 🧩 Category Section -->
+  <section class="categories">
+    <h2>Explore Service Categories</h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="showProviders('cleaners')">🧹 Cleaners</div>
+      <div class="category-card" onclick="showProviders('electricians')">💡 Electricians</div>
+      <div class="category-card" onclick="showProviders('plumbers')">🚰 Plumbers</div>
+      <div class="category-card" onclick="showProviders('painters')">🖌️ Painters</div>
+      <div class="category-card" onclick="showProviders('carpenters')">🪑 Carpenters</div>
+      <div class="category-card" onclick="showProviders('gardeners')">🌿 Gardeners</div>
+    </div>
+  </section>
+
+  <!-- 👷 Provider Section -->
+  <section class="providers" id="providerSection">
+    <h2>Available Providers</h2>
+    <div class="provider-grid" id="providerGrid">
+      <!-- Providers will load here via JS -->
+    </div>
+  </section>
+
+  <section class="join-section">
+  <h2>Are You a Professional Service Provider?</h2>
+  <p>Join RentEasy’s verified provider network and connect with real tenants and landlords who need your services.</p>
+  <a href="provider-register.html" class="join-btn">Join as a Provider</a>
+</section>
+
+  <!-- ✨ CTA Section -->
+  <section class="cta">
+    <h2>Offer Home Services?</h2>
+    <p>Join our verified provider network and get connected with tenants and landlords today.</p>
+    <a href="#" class="cta-btn">Join as a Provider</a>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    <p>© 2025 RentEasy. All rights reserved.</p>
+  </footer>
+<script src="js/js/services.js" defer></script>
+</body>
+</html>

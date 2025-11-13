@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post a Property — RentEasy</title>
+  <link rel="stylesheet" href="css/post.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">RentEasy</div>
+    <button id="menuToggle" class="menu-btn">☰</button>
+    <div class="nav-right">
+      <span id="userGreeting">Guest</span>
+      <a id="dashboardLink" href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <aside id="sidebar" class="sidebar hidden">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="post.html" class="active">Post</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </aside>
+
+  <main class="container">
+    <h1>Post a Property</h1>
+
+    <div class="progress">
+      <div class="step-indicator" data-step="1">1. Basic</div>
+      <div class="step-indicator" data-step="2">2. Location</div>
+      <div class="step-indicator" data-step="3">3. Images</div>
+      <div class="step-indicator" data-step="4">4. Confirm</div>
+    </div>
+
+    <form id="postForm" class="post-form" enctype="multipart/form-data" novalidate>
+
+      <!-- STEP 1: BASIC INFO -->
+      <section class="form-step active" id="step-1">
+        <h2>Basic information</h2>
+        <label>Title
+          <input type="text" id="title" name="title" required placeholder="e.g. Spacious 2BR near Yaba" />
+        </label>
+
+        <label>Description
+          <textarea id="description" name="description" rows="4" placeholder="Describe the property..." required></textarea>
+        </label>
+
+        <div class="row">
+          <label>Price (₦)
+            <input type="number" id="price" name="price" required min="0" />
+          </label>
+
+          <label>Property type
+            <select id="propertyType" required>
+              <option value="">Select property type</option>
+              <optgroup label="Apartments / Flats">
+                <option value="self-contained">Self-contained</option>
+                <option value="1br-flat">1-bedroom flat</option>
+                <option value="2br-flat">2-bedroom flat</option>
+                <option value="3br-flat">3-bedroom flat</option>
+              </optgroup>
+              <optgroup label="Duplex">
+                <option value="1br-duplex">1-bedroom duplex</option>
+                <option value="2br-duplex">2-bedroom duplex</option>
+                <option value="3br-duplex">3-bedroom duplex</option>
+              </optgroup>
+              <option value="other">Other</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Poster type
+            <select id="posterType" required>
+              <option value="tenant">Outgoing Tenant</option>
+              <option value="landlord">Landlord</option>
+              <option value="manager">Manager (post for landlord)</option>
+            </select>
+          </label>
+
+          <label>Contact phone
+            <input type="tel" id="contactPhone" placeholder="+234..." required />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="next-btn" data-next="step-2">Next: Location →</button>
+        </div>
+      </section>
+
+      <!-- STEP 2: LOCATION -->
+      <section class="form-step" id="step-2">
+        <h2>Location</h2>
+
+        <label>State / City / LGA / Address
+          <input type="text" id="locationText" required placeholder="State, LGA, address..." />
+        </label>
+
+        <div class="row">
+          <label>Latitude
+            <input type="text" id="lat" placeholder="Latitude (auto)" />
+          </label>
+
+          <label>Longitude
+            <input type="text" id="lng" placeholder="Longitude (auto)" />
+          </label>
+        </div>
+
+        <div id="map" class="map-placeholder">Loading map...</div>
+
+        <div class="actions">
+          <button type="button" class="prev-btn" data-prev="step-1">← Previous</button>
+          <button type="button" class="next-btn" data-next="step-3">Next: Images →</button>
+        </div>
+      </section>
+
+      <!-- STEP 3: IMAGES -->
+      <section class="form-step" id="step-3">
+        <h2>Pictures (group by area)</h2>
+        <p>Upload images into specific groups — kitchen, dining, outside, inside, rooms. Multiple allowed in each.</p>
+
+        <div class="image-group">
+          <label>Kitchen images
+            <input type="file" accept="image/*" id="images-kitchen" multiple />
+          </label>
+          <div class="preview" id="preview-kitchen"></div>
+        </div>
+
+        <div class="image-group">
+          <label>Dining / Living images
+            <input type="file" accept="image/*" id="images-dining" multiple />
+          </label>
+          <div class="preview" id="preview-dining"></div>
+        </div>
+
+        <div class="image-group">
+          <label>Outside / Compound images
+            <input type="file" accept="image/*" id="images-outside" multiple />
+          </label>
+          <div class="preview" id="preview-outside"></div>
+        </div>
+
+        <div class="image-group">
+          <label>Inside / Room images
+            <input type="file" accept="image/*" id="images-inside" multiple />
+          </label>
+          <div class="preview" id="preview-inside"></div>
+        </div>
+
+        <div class="image-group">
+          <label>Other images
+            <input type="file" accept="image/*" id="images-other" multiple />
+          </label>
+          <div class="preview" id="preview-other"></div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="prev-btn" data-prev="step-2">← Previous</button>
+          <button type="button" class="next-btn" data-next="step-4">Next: Confirm →</button>
+        </div>
+      </section>
+
+      <!-- STEP 4: CONFIRMATION -->
+      <section class="form-step" id="step-4">
+        <h2>Confirm & Post</h2>
+        <div class="summary" id="summaryBox"></div>
+
+        <div class="postas">
+          <h3>POST AS (POSTAS)</h3>
+          <p>Choose how you want to post — this controls which login/signup route you'll be required to use.</p>
+          <div class="postas-buttons">
+            <button type="button" class="postas-btn" data-postas="manager">POSTAS Manager</button>
+            <button type="button" class="postas-btn" data-postas="tenant">POSTAS Tenant</button>
+            <button type="button" class="postas-btn" data-postas="landlord">POSTAS Landlord</button>
+          </div>
+        </div>
+
+        <div class="verify-row">
+          <button type="button" id="requestVerification">Request Verification (sends to admin)</button>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="prev-btn" data-prev="step-3">← Previous</button>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <script src="js/js/post.js"></script>
+  <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>

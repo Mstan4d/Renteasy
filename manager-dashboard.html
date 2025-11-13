@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Dashboard | RentEasy</title>
+  <link rel="stylesheet" href="css/manager-dashboard.css">
+  <!-- <script src="js/js/login-check.js"></script>-->
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="manager-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="manager-verification.html">Verify Listings</a></li>
+        <li><a href="manager-profile.html">Profile</a></li>
+        <li><a href="messages-monitor.html">View Messages</a></li>
+        <li><a href="manager-login.html">Logout</a></li>
+        <li><a href="manager-verification-pass.html">KYC Verification</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="user-info">
+  <img id="userAvatar" src="images/default-avatar.png" alt="User Avatar">
+  <span id="welcomeMessage">Welcome!</span>
+</div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+     <header>
+  <h1>Welcome, Manager</h1>
+  <p>Overview of your assigned listings and activities</p>
+  <div class="card">
+    KYC Status: <span id="kyc-status">Not Submitted <button id="kyc-action-btn">Submit / View</button></span>
+  </div>
+</header>
+    </header>
+
+    <!-- Dashboard Cards -->
+    <section class="dashboard-cards">
+      <div class="card">
+        <h2>Assigned Listings</h2>
+        <p id="assigned-count">0</p>
+      </div>
+      <div class="card">
+        <h2>Unverified Listings</h2>
+        <p id="unverified-count">0</p>
+      </div>
+      <div class="card">
+        <h2>Nearby Properties</h2>
+        <p id="nearby-count">0</p>
+      </div>
+      <div class="card">
+        <h2>Commissions</h2>
+        <p id="commission-total">₦0</p>
+      </div>
+    </section>
+
+    <!-- Listings Table -->
+    <section class="listings-section">
+      <h2>Listings</h2>
+      <table id="listings-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Owner</th>
+            <th>Status</th>
+            <th>Location</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate rows here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+ <!-- <script src="js/js/manager-dashboard.js"></script>-->
+  <script src="js/js/logout.js"></script>
+</body>
+</html>

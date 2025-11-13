@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages Monitor | RentEasy</title>
+  <link rel="stylesheet" href="css/messages-monitor.css" />
+</head>
+<body>
+  <div class="monitor-container">
+    <header class="monitor-header">
+      <h2>Messages Monitor</h2>
+      <div class="monitor-controls">
+        <input type="text" id="monitorSearch" placeholder="Search conversations..." />
+        <select id="roleFilter">
+          <option value="">All</option>
+          <option value="unread">Unread</option>
+          <option value="tenants">Tenant Chats</option>
+          <option value="managers">Manager Chats</option>
+        </select>
+        <button id="backToDashboard">Back to Dashboard</button>
+      </div>
+    </header>
+
+    <main class="monitor-main">
+      <aside class="conversation-panel">
+        <ul id="monitorConversationList"></ul>
+      </aside>
+
+      <section class="chat-panel">
+        <h3 id="monitorChatWith">Select a conversation to view messages</h3>
+        <div id="monitorChatWindow" class="chat-window"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Notification Sound -->
+  <audio id="notifySound" src="sounds/notify.mp3" preload="auto"></audio>
+
+  <script src="js/js/messages-monitor.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Listings | RentEasy</title>
+  <link rel="stylesheet" href="css/listings.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><i class="fas fa-home"></i> RentEasy</div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active"><i class="fas fa-house"></i> Home</a></li>
+    <li><a href="listings.html"><i class="fas fa-list"></i> Listings</a></li>
+    <li><a href="post.html"><i class="fas fa-plus-circle"></i> Post</a></li>
+    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="header-inner">
+    <div>
+      <h1>Available Listings</h1>
+      <p>Browse homes posted by outgoing tenants</p>
+    </div>
+    <div class="summary-pill" id="verifiedSummary">
+      <!-- Verified / Unverified summary filled by JS -->
+    </div>
+  </div>
+</header>
+
+<!-- ===== Sticky Filter Bar ===== -->
+<section class="filter-bar" id="filterBar">
+  <div class="filter-row">
+    <div class="filter-col">
+      <select id="filterState">
+        <option value="">All States</option>
+      </select>
+    </div>
+    <div class="filter-col">
+      <select id="filterLGA" disabled>
+        <option value="">All LGAs</option>
+      </select>
+    </div>
+    <div class="filter-col">
+      <select id="filterType">
+        <option value="">All Property Types</option>
+        <option value="Self Contain">Self Contain</option>
+        <option value="1 Bedroom">1 Bedroom</option>
+        <option value="2 Bedroom">2 Bedroom</option>
+        <option value="3 Bedroom">3 Bedroom</option>
+        <option value="Duplex">Duplex</option>
+        <option value="Flat">Flat</option>
+      </select>
+    </div>
+    <div class="filter-col search-col">
+      <input id="filterKeyword" placeholder="Search by title, address or name">
+    </div>
+    <div class="filter-col actions-col">
+      <button id="clearFilters" class="btn small">Clear Filters</button>
+    </div>
+  </div>
+</section>
+
+<!-- Count / status -->
+<div class="filter-count" id="filterCount">Showing 0 of 0 listings</div>
+
+<main class="listings-wrapper">
+  <div id="listingsGrid" class="listings-grid">
+    <!-- listing cards injected by JS -->
+  </div>
+
+  <!-- Details Section hidden by default -->
+  <div id="detailsSection" class="details-section" style="display:none;">
+    <button id="backToListings" class="btn">⬅ Back to Listings</button>
+    <div id="detailsContent"></div>
+  </div>
+</main>
+
+<!-- Ding audio -->
+<audio id="notifySound" preload="auto">
+  <source src="assets/sounds/notify.mp3" type="audio/mpeg">
+  <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg" type="audio/ogg">
+</audio>
+
+<script src="js/js/location.js"></script>
+<script src="js/js/listings.js"></script>
+</body>
+</html>

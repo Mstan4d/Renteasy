@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Profile | RentEasy</title>
+  <link rel="stylesheet" href="css/provider-profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <h1>Edit Your Profile</h1>
+
+    <form id="editProfileForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Service Type</label>
+      <select id="serviceType" required>
+        <option value="Plumber">Plumber</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Painter">Painter</option>
+        <option value="Carpenter">Carpenter</option>
+        <option value="Cleaner">Cleaner</option>
+        <option value="Technician">Technician</option>
+      </select>
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label>Email Address (read-only)</label>
+      <input type="email" id="email" readonly />
+
+      <button type="submit">Save Changes</button>
+      <a href="provider-dashboard.html" class="back-btn">Back to Dashboard</a>
+    </form>
+  </div>
+
+  <script src="js/js/provider-profile.js"></script>
+</body>
+</html>

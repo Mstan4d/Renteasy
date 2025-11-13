@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estate Firm Dashboard | RentEasy</title>
+  <link rel="stylesheet" href="css/estate-dashboard.css">
+</head>
+<body>
+
+  <!-- Sidebar / Navbar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="estate-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="estate-properties.html">Managed Properties</a></li>
+        <li><a href="estate-add-property.html">Add Property</a></li>
+        <li><a href="estate-kyc.html">KYC Verification</a></li>
+        <li><a href="estate-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Header/User Info -->
+  <header class="header">
+    <div class="user-info">
+      <img src="images/default-avatar.png" alt="Avatar">
+      <span id="welcomeMessage">Welcome, Estate Firm!</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Dashboard Cards -->
+    <section class="dashboard-cards">
+      <div class="card">
+        <h2>Total Properties</h2>
+        <p id="total-properties">0</p>
+      </div>
+      <div class="card">
+        <h2>Pending Rent</h2>
+        <p id="pending-rent">0</p>
+      </div>
+      <div class="card">
+        <h2>Paid Rents</h2>
+        <p id="paid-rent">0</p>
+      </div>
+      <div class="card">
+        <h2>Average Rating</h2>
+        <p id="average-rating">0 ⭐</p>
+      </div>
+      <div class="card">
+        <h2>Management Fees Earned</h2>
+        <p id="management-fees">₦0</p>
+      </div>
+    </section>
+    
+          <!-- Leads / Enquiries Section -->
+<section id="leadsSection" class="dashboard-section">
+  <h2>Your Leads & Enquiries</h2>
+  <div id="leadsContainer" class="leads-container"></div>
+</section>
+
+    <!-- Managed Properties Table -->
+    <section class="properties-section">
+      <h2>Managed Properties</h2>
+      <div class="table-container">
+        <table id="properties-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Owner</th>
+              <th>Rent Due Date</th>
+              <th>End Date</th>
+              <th>Rent Status</th>
+              <th>Rating</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- JS populates rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <audio id="notifySound" src="sounds/notification.mp3"></audio>
+    <!--<script src="js/js/estate-dashboard.js"></script> -->
+</body>
+</html>

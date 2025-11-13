@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Listings | RentEasy</title>
+  <link rel="stylesheet" href="css/manager-verification.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="manager-dashboard.html">Dashboard</a></li>
+        <li><a href="manager-verification.html" class="active">Verify Listings</a></li>
+        <li><a href="manager-profile.html">Profile</a></li>
+        <li><a href="manager-login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <h1>Verify Property Listings</h1>
+      <p>Upload inspection proofs and approve or reject listings.</p>
+    </header>
+
+    <section class="verification-section">
+      <form id="verificationForm">
+        <label for="propertyName">Property Name</label>
+        <input type="text" id="propertyName" readonly>
+
+        <label for="ownerName">Owner Name</label>
+        <input type="text" id="ownerName" readonly>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" readonly>
+
+        <div id="mapPreview" class="map-preview"></div>
+
+        <label for="photoProof">Upload Photo Proofs</label>
+        <input type="file" id="photoProof" accept="image/*,video/*" multiple>
+        <div id="previewContainer" class="preview-container"></div>
+
+        <label for="inspectionReport">Upload Inspection Report (PDF/DOC)</label>
+        <input type="file" id="inspectionReport" accept=".pdf,.doc,.docx">
+
+        <div class="action-buttons">
+          <button type="submit" class="approve-btn">Approve</button>
+          <button type="button" class="reject-btn" onclick="rejectListing()">Reject</button>
+          <button type="button" class="back-btn" onclick="window.location.href='manager-dashboard.html'">Back to Dashboard</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/js/manager-verification.js"></script>
+</body>
+</html>

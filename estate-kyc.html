@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estate KYC Verification | RentEasy</title>
+  <link rel="stylesheet" href="css/estate-kyc.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="estate-dashboard.html">Dashboard</a></li>
+        <li><a href="estate-kyc.html" class="active">KYC Verification</a></li>
+        <li><a href="estate-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <h1>KYC Verification</h1>
+      <p>Submit your business details for verification</p>
+    </header>
+
+    <section class="kyc-section">
+      <form id="kycForm">
+        <label for="businessName">Business Name</label>
+        <input type="text" id="businessName" placeholder="Enter your business name" required>
+
+        <label for="license">Business License / Certificate</label>
+        <input type="file" id="license" accept="image/*,.pdf" required>
+
+        <label for="officeProof">Proof of Office</label>
+        <input type="file" id="officeProof" accept="image/*,.pdf" required>
+
+        <label for="contactPerson">Manager / Contact Person</label>
+        <input type="text" id="contactPerson" placeholder="Optional">
+
+        <button type="submit" class="submit-btn">Submit for Verification</button>
+      </form>
+    </section>
+  </main>
+
+  <audio id="notifySound" src="audio/notify.mp3"></audio>
+  <script src="js/js/estate-kyc.js"></script>
+</body>
+</html>

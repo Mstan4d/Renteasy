@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentEasy | Find Apartments Easily</title>
+
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="css/home.css" />
+
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- ========================
+   Navbar
+======================== -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/renteasy logo.jpeg" alt="RentEasy Logo">
+    <span>RentEasy</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="post.html">Post</a>
+    <a href="services.html">Services</a>
+    <a href="login.html">Login</a>
+    <span id="usernameDisplay" class="username-display"></span>
+    <span id="unreadBadge" class="badge"></span>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Apartments Easily Without Agents</h1>
+    <p>Rent directly from outgoing tenants and verified landlords.</p>
+    <button onclick="document.querySelector('#search').scrollIntoView({ behavior: 'smooth' })">
+      Start Searching
+    </button>
+  </section>
+
+ <!-- ========================
+     SEARCH SECTION
+======================== -->
+<section class="search-section" id="search">
+  <h2>Find Apartments Easily</h2>
+  
+  <form id="searchForm" class="search-form">
+    <div class="form-group">
+      <label for="state">Select State</label>
+      <select id="state" name="state">
+        <option value="">-- Choose State --</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="lga">Select LGA</label>
+      <select id="lga" name="lga" disabled>
+        <option value="">-- Choose LGA --</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="search-location">Search by Location or Keyword</label>
+      <input type="text" id="search-location" placeholder="e.g. Lekki, Garki, Ajah..." />
+    </div>
+
+    <div class="form-group">
+      <label for="search-price">Max Price (₦)</label>
+      <input type="number" id="search-price" placeholder="e.g. 800000" />
+    </div>
+
+    <button type="submit" id="searchBtn">🔍 Search Listings</button>
+  </form>
+</section>
+  <!-- Listings Section -->
+  <section id="listings">
+    <h2 style="text-align:center; margin-top:40px;">Latest Listings</h2>
+    <div id="listing-container" class="listings-container">
+      <!-- Listings loaded dynamically by JS -->
+    </div>
+  </section>
+
+  <!-- Hire a Property Manager Promo -->
+  <section class="hire-manager-promo">
+    <div class="hire-manager-content">
+      <h2>Hire a Verified Property Manager</h2>
+      <p>Connect with top-rated managers and trusted property firms to manage your property seamlessly. Filter by location and ratings to find the perfect fit.</p>
+      <a href="find-managers.html" class="hire-btn">Find a Manager</a>
+    </div>
+  </section>
+
+  <!-- Landlord Verification Promo -->
+  <section class="verify-promo">
+    <div class="verify-text">
+      <h2>Are You a Landlord?</h2>
+      <p>Get your property verified and attract serious tenants directly — no agents, no stress.</p>
+      <a href="landlord-verification.html" class="verify-btn">Verify Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 RentEasy. Simplifying Rentals in Nigeria.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/js/location.js" defer></script>
+  <script src="js/js/home.js" defer></script>
+</body>
+</html>

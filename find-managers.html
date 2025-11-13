@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Find Estate Firms | RentEasy</title>
+
+  <!-- page CSS -->
+  <link rel="stylesheet" href="css/find-managers.css">
+
+  <!-- Font Awesome (for stars/icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-home"></i> RentEasy</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="listings.html">Listings</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <span id="usernameDisplay"></span>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="header-inner">
+      <div>
+        <h1>Find Estate Firms & High-rated Managers</h1>
+        <p>Search certified partners and registered estate firms. RentEasy receives 2% of the management fee for connections made through the app.</p>
+      </div>
+      <div id="resultSummary" class="summary-pill"></div>
+    </div>
+  </header>
+
+  <!-- Filter bar -->
+  <section class="filter-panel">
+    <div class="filter-row">
+      <div class="col">
+        <select id="fmState"><option value="">All States</option></select>
+      </div>
+      <div class="col">
+        <select id="fmLga" disabled><option value="">All LGAs</option></select>
+      </div>
+      <div class="col">
+        <select id="fmType">
+          <option value="">All Types</option>
+          <option value="Verified Firm">Verified Firm</option>
+          <option value="Certified Partner">Certified Partner</option>
+        </select>
+      </div>
+      <div class="col">
+        <input id="fmSearch" placeholder="Search by name, company or service area">
+      </div>
+      <div class="col actions">
+        <select id="fmSort">
+          <option value="toprated">Sort: Top Rated</option>
+          <option value="nearest">Sort: Nearest</option>
+          <option value="newest">Sort: Newest</option>
+        </select>
+        <button id="fmClear" class="btn small">Clear</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="fm-main">
+    <div id="fmGrid" class="fm-grid"></div>
+  </main>
+
+  <!-- Contact / Hire Modal -->
+  <div id="hireModal" class="modal" style="display:none;" aria-hidden="true">
+    <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="hireTitle">
+      <button class="modal-close" id="hireClose" title="Close">&times;</button>
+      <h3 id="hireTitle">Send Hire Request</h3>
+      <form id="hireForm">
+        <input type="hidden" id="hireTargetId">
+        <label>Property / Address</label>
+        <input id="hireProperty" placeholder="Property name or address" required>
+        <label>Management Duration</label>
+        <select id="hireDuration" required>
+          <option value="">Select duration</option>
+          <option value="3 months">3 months</option>
+          <option value="6 months">6 months</option>
+          <option value="1 year">1 year</option>
+        </select>
+        <label>Message (optional)</label>
+        <textarea id="hireMessage" placeholder="Short message to the firm"></textarea>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn primary">Send Request to Admin</button>
+          <button type="button" id="hireCancel" class="btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Ding audio -->
+  <audio id="fmDing" preload="auto">
+    <source src="assets/sounds/notify.mp3" type="audio/mpeg">
+    <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg" type="audio/ogg">
+  </audio>
+
+  <!-- your existing location data (you said you already have it) -->
+  <script src="js/js/location.js"></script>
+
+  <!-- page script (keep path convention) -->
+  <script src="js/js/find-managers.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Profile | RentEasy</title>
+  <link rel="stylesheet" href="css/manager-profile.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RentEasy</div>
+    <nav>
+      <ul>
+        <li><a href="manager-dashboard.html">Dashboard</a></li>
+        <li><a href="manager-verification.html">Verify Listings</a></li>
+        <li><a href="manager-profile.html" class="active">Profile</a></li>
+        <li><a href="manager-login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <h1>My Profile</h1>
+      <p>Manage your personal info, service area, and view ratings</p>
+    </header>
+
+    <section class="profile-section">
+      <form id="profileForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="serviceArea">Service Area / Location</label>
+        <input type="text" id="serviceArea" placeholder="Enter your service area" required>
+
+        <label for="password">Change Password</label>
+        <input type="password" id="password" placeholder="Enter new password">
+
+        <div class="action-buttons">
+          <button type="submit" class="save-btn">Save Changes</button>
+        </div>
+      </form>
+
+      <div class="ratings-section">
+        <h2>Ratings & Reviews</h2>
+        <ul id="ratingsList">
+          <!-- JS will populate ratings -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/js/manager-profile.js"></script>
+</body>
+</html>

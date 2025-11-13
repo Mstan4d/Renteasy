@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Messages | RentEasy</title>
+  <link rel="stylesheet" href="css/messages.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RentEasy</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="post.html">Post</a>
+      <a href="messages.html" id="messagesLink">
+        Messages <span id="unreadBadge" class="badge">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="messages-container">
+    <!-- Conversations sidebar -->
+    <aside class="conversations" id="conversationsPane">
+      <div class="conversations-header">
+        <h3>Conversations</h3>
+        <div id="convoSummary" class="summary-pill"></div>
+      </div>
+      <ul id="conversationList"></ul>
+    </aside>
+
+    <!-- Chat area -->
+    <main class="chat" id="chatPane">
+      <header class="chat-header">
+        <div class="chat-head-left">
+          <h3 id="chatWith">Select a conversation</h3>
+          <div id="participantStatus" class="status small"> </div>
+        </div>
+        <div class="chat-head-right">
+          <button id="openListingBtn" class="btn small" style="display:none">Open Listing</button>
+        </div>
+      </header>
+
+      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+
+      <div id="typingIndicator" class="typing-indicator" style="display:none">Someone is typing...</div>
+
+      <form id="chatForm" class="chat-form" enctype="multipart/form-data">
+        <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off" />
+        <input type="file" id="chatAttachment" accept="image/*,video/*,application/pdf" />
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+    </main>
+  </section>
+
+  <audio id="notifySound" preload="auto">
+    <source src="assets/sounds/notify.mp3" type="audio/mpeg">
+    <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="js/js/messages.js" defer></script>
+</body>
+</html>

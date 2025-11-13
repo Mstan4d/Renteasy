@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentEasy | Landlord Verification</title>
+  <link rel="stylesheet" href="css/landlord-verification.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🏠 RentEasy</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="find-house.html">Find House</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="landlord-verification.html">Verify Landlord</a>
+    </nav>
+    <button class="verify-btn">Verify Now</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Earn Trust. Rent Faster. Get Verified.</h1>
+      <p>Join trusted landlords renting directly to verified tenants with full control and confidence.</p>
+      <button class="start-btn">Start Verification</button>
+    </div>
+  </section>
+
+  <!-- Why Verify Section -->
+  <section class="why-verify">
+    <h2>Why Verify Your Property?</h2>
+    <div class="cards">
+      <div class="card">
+        <i>🕒</i>
+        <h3>Faster Rentals</h3>
+        <p>Verified landlords appear first in search results and attract serious tenants faster.</p>
+      </div>
+      <div class="card">
+        <i>🔒</i>
+        <h3>Trust & Credibility</h3>
+        <p>Earn the Verified Badge and protect your property from fake or unauthorized listings.</p>
+      </div>
+      <div class="card">
+        <i>👥</i>
+        <h3>Direct Tenants Only</h3>
+        <p>Receive direct inquiries without middlemen or inflated rent prices.</p>
+      </div>
+      <div class="card">
+        <i>⚙️</i>
+        <h3>Full Control</h3>
+        <p>Update rent, availability, and photos anytime directly from your dashboard.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verification Form -->
+  <section class="verification-form" id="verify-form">
+    <h2>Submit Your Details for Verification</h2>
+    <form id="landlordForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Property Address</label>
+      <input type="text" id="address" required />
+
+      <label>Upload ID (PDF/Image)</label>
+      <input type="file" id="ownership" accept=".jpg,.jpeg,.png,.pdf" required />
+
+      <label>Contact Number</label>
+      <input type="tel" id="phone" required />
+
+      <label>Email Address</label>
+      <input type="email" id="email" required />
+
+      <button type="submit" class="submit-btn">Submit for Verification</button>
+    </form>
+  </section>
+
+  <!-- Badge Preview -->
+  <section class="badge-preview">
+    <h2>Your Verified Landlord Badge</h2>
+    <div class="badge-card">
+      <div class="badge-icon">🥇</div>
+      <div class="badge-text">
+        <h3>Verified Landlord</h3>
+        <p>This badge will appear next to your listings once approved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 RentEasy. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="js/js/landlord-verification.js"></script>
+  <script src="js/js/reviews.js"></script>
+</body>
+</html>
